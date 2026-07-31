@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mark Star — Content Strategist & Storyteller</title>
+<title>Anthony Favourite (Mark Star) — Content Strategist, Writer & Web3 Storyteller</title>
+<meta name="description" content="Anthony Favourite (Mark Star) is a Content Strategist, Writer, and Web3 Storyteller helping brands communicate complex ideas through content, research, and digital strategy.">
+<meta property="og:title" content="Anthony Favourite (Mark Star) — Content Strategist & Web3 Storyteller">
+<meta property="og:description" content="Writing, research, social media strategy, and digital storytelling.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312141a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23e3a44e' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -157,19 +162,41 @@
   .archive-item .tags{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--parchment-dim);}
   .archive-item .tags span{margin-right:14px;}
   .archive-item .goto{font-family:'JetBrains Mono',monospace;font-size:12.5px;white-space:nowrap;}
-  .archive-item .goto a{display:block;margin-bottom:6px;}
+  .archive-item .goto a{display:block;margin-bottom:6px;color:var(--parchment);border-bottom:1px solid var(--line-strong);width:fit-content;}
+  .archive-item .goto a:hover{color:var(--amber);border-color:var(--amber);}
+  .goto-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.08em;color:var(--parchment-dim);margin-bottom:4px;}
+  .archive-footnote{margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--parchment-dim);}
 
-  /* PROJECTS */
-  .proj-cloud{display:flex;flex-wrap:wrap;gap:10px;}
-  .proj-cloud span{
-    font-family:'JetBrains Mono',monospace;
-    font-size:13px;
-    border:1px solid var(--line-strong);
-    padding:9px 15px;
-    border-radius:2px;
-    color:var(--parchment);
+  /* ONLINE PRESENCE */
+  .presence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(max-width:640px){.presence-grid{grid-template-columns:1fr;}}
+  .presence-card{background:var(--ink);padding:26px;}
+  .presence-card .platform{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;}
+  .presence-card a.handle{font-family:'Fraunces',serif;font-size:20px;font-weight:600;display:block;margin-bottom:8px;border-bottom:none;color:var(--parchment);}
+  .presence-card a.handle:hover{color:var(--amber);}
+  .presence-card p{color:var(--parchment-dim);font-size:14px;}
+
+  /* COLLABORATIONS */
+  .collab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(max-width:640px){.collab-grid{grid-template-columns:1fr;}}
+  .collab-card{background:var(--ink);padding:26px;}
+  .collab-card h3{font-size:18px;margin-bottom:12px;}
+  .collab-card .role{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
+  .collab-card ul{list-style:none;}
+  .collab-card li{color:var(--parchment-dim);font-size:14px;padding:3px 0;}
+  .collab-card li::before{content:"— ";color:var(--parchment-dim);}
+  .collab-more{margin-top:22px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--parchment-dim);}
+  .collab-note{margin-top:26px;color:var(--parchment-dim);font-size:15px;max-width:60ch;}
+
+  /* IMPACT */
+  .impact-list{list-style:none;max-width:640px;}
+  .impact-list li{
+    position:relative;padding:16px 0 16px 28px;
+    border-top:1px solid var(--line);
+    color:var(--parchment-dim);font-size:15.5px;
   }
-  .proj-note{margin-top:26px;color:var(--parchment-dim);font-size:15px;max-width:60ch;}
+  .impact-list li:first-child{border-top:none;}
+  .impact-list li::before{content:"›";position:absolute;left:0;color:var(--amber);font-family:'JetBrains Mono',monospace;font-weight:600;}
 
   /* SKILLS */
   .tri-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
@@ -199,8 +226,10 @@
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#what-i-do">What I Do</a>
-      <a href="#archive">Archive</a>
-      <a href="#projects">Projects</a>
+      <a href="#archive">Selected Work</a>
+      <a href="#presence">Online Presence</a>
+      <a href="#projects">Collaborations</a>
+      <a href="#impact">Impact</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -208,14 +237,14 @@
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Content Strategist &mdash; Storyteller &mdash; Web3</p>
+    <p class="eyebrow">Content Strategist &mdash; Storyteller &mdash; Web3 Writer</p>
     <h1>Mark <span>Star</span></h1>
-    <p class="alias">Anthony Favourite &nbsp;/&nbsp; Nigeria</p>
-    <p class="mission">I turn complex ideas into content that informs, connects, and converts, across crypto, tech, education, and personal development.</p>
+    <p class="alias">Anthony Favourite &nbsp;/&nbsp; Content Strategist &amp; Writer</p>
+    <p class="mission">I transform complex ideas into clear, engaging content that informs audiences, builds communities, and helps brands communicate better across Web3, technology, education, and personal development.</p>
     <div class="hero-links">
-      <a href="#archive">View Archive →</a>
+      <a href="#archive">View Selected Work →</a>
       <a href="https://x.com/_Markstar" target="_blank" rel="noopener">X / Twitter</a>
-      <a href="https://t.me/markstar3z" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:anthonyfavourite761@gmail.com">Email Me →</a>
     </div>
   </div>
   <div class="ticker-band" aria-hidden="true">
@@ -228,9 +257,9 @@
     <div class="about-mark">MS</div>
     <div>
       <p class="eyebrow" style="margin-bottom:14px;">About</p>
-      <p>I'm <strong>Anthony Favourite</strong>, also known as <strong>Mark Star</strong>. Content Strategist and Storyteller based in Nigeria, working across Web3, education, and design.</p>
-      <p>I turn complex ideas into content that informs, connects, and converts. My work spans crypto, tech, education, and personal development. Beyond writing, I bring skills in graphic design, social media growth, and digital branding.</p>
-      <p>I'm a Computing student, so I combine technical understanding with storytelling to create content that's valuable and easy to follow. Good writing isn't just words. It's helping people understand, trust, and take action.</p>
+      <p>I'm <strong>Anthony Favourite</strong>, also known as <strong>Mark Star</strong>. Content Strategist and Storyteller working across Web3, technology, education, and digital media.</p>
+      <p>I turn complex ideas into content that informs, connects, and converts. My work spans crypto, tech, education, and personal development. Beyond writing, I bring experience in social media management, visual content creation, digital branding, and community communication.</p>
+      <p>I'm a Computing student, so I combine technical understanding with storytelling to create content that's valuable and easy to follow. Good writing isn't just about words. It's helping people understand, trust, and take action.</p>
     </div>
   </div>
 </section>
@@ -239,15 +268,15 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">What I Do</p>
-      <h2>Writing, strategy, and design</h2>
+      <h2>Content, strategy, and digital storytelling</h2>
     </div>
     <div class="services">
-      <div class="service"><div class="idx">01</div><h3>Ghostwriting</h3><p>Content written and shaped in someone else's voice, kept consistent across formats.</p></div>
-      <div class="service"><div class="idx">02</div><h3>Web3 & Crypto Writing</h3><p>Research-driven content on projects, narratives, and market trends.</p></div>
-      <div class="service"><div class="idx">03</div><h3>X Content Strategy</h3><p>Threads, posts, and growth systems built for engagement.</p></div>
-      <div class="service"><div class="idx">04</div><h3>Social Media Management</h3><p>Planning and running content that builds real conversation.</p></div>
-      <div class="service"><div class="idx">05</div><h3>Copywriting</h3><p>Announcements, campaign copy, and promotional content that converts.</p></div>
-      <div class="service"><div class="idx">06</div><h3>Graphic Design</h3><p>Visual content built to match brand voice, using Canva and CapCut.</p></div>
+      <div class="service"><div class="idx">01</div><h3>Ghostwriting</h3><p>Writing authentic content in a client's voice while maintaining consistency across platforms and formats.</p></div>
+      <div class="service"><div class="idx">02</div><h3>Web3 & Crypto Writing</h3><p>Research-driven content covering blockchain projects, narratives, ecosystems, and emerging trends.</p></div>
+      <div class="service"><div class="idx">03</div><h3>X Content Strategy</h3><p>Strategic posts, threads, and content systems designed to improve visibility and audience engagement.</p></div>
+      <div class="service"><div class="idx">04</div><h3>Social Media Management</h3><p>Managing content calendars, audience engagement, brand communication, and publishing systems.</p></div>
+      <div class="service"><div class="idx">05</div><h3>Copywriting</h3><p>Campaign copy, announcements, and promotional content designed to drive attention and action.</p></div>
+      <div class="service"><div class="idx">06</div><h3>Visual Content Design</h3><p>Visual content built to match brand voice, using modern design and editing workflows.</p></div>
     </div>
   </div>
 </section>
@@ -255,8 +284,8 @@
 <section id="archive">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Content Archive</p>
-      <h2>A collection of my writing, research, and creative projects</h2>
+      <p class="eyebrow">Selected Work</p>
+      <h2>A collection of my writing, strategy, and digital content work</h2>
     </div>
     <div class="archive-list">
       <div class="archive-item">
@@ -280,15 +309,53 @@
       <div class="archive-item">
         <div class="num">03</div>
         <div>
-          <h3>Social Media Content</h3>
-          <p class="desc">Examples of content strategy in action, built for engagement and conversation.</p>
-          <p class="tags"><span>X threads</span><span>Viral-style posts</span><span>Community content</span></p>
+          <h3>Social Media Management</h3>
+          <p class="desc">Managing social platforms through content strategy, audience engagement, brand communication, and consistent publishing systems.</p>
+          <p class="tags"><span>X Management</span><span>Content Strategy</span><span>Community Growth</span><span>Brand Voice</span><span>Audience Engagement</span></p>
         </div>
         <div class="goto">
-          <a href="https://www.tiktok.com/@mark_star3z" target="_blank" rel="noopener">TikTok →</a>
-          <a href="https://www.tiktok.com/@tcity_media.tv" target="_blank" rel="noopener">TikTok →</a>
-          <a href="https://x.com/_Markstar" target="_blank" rel="noopener">X →</a>
+          <p class="goto-label">Personal Brand</p>
+          <a href="https://x.com/_Markstar" target="_blank" rel="noopener">@_Markstar →</a>
+          <p class="goto-label" style="margin-top:12px;">Accounts Managed / Supported</p>
+          <a href="https://x.com/sinennn000" target="_blank" rel="noopener">@sinennn000 →</a>
+          <a href="https://x.com/_codora_xyz" target="_blank" rel="noopener">@_codora_xyz →</a>
+          <a href="https://x.com/chim_tae1" target="_blank" rel="noopener">@chim_tae1 →</a>
+          <a href="https://x.com/Asherbackwoodz" target="_blank" rel="noopener">@Asherbackwoodz →</a>
+          <p class="goto-label" style="margin-top:12px;">Previous Media Experience</p>
+          <a href="https://www.tiktok.com/@tcity_media.tv" target="_blank" rel="noopener">@tcity_media.tv →</a>
         </div>
+      </div>
+    </div>
+    <p class="archive-footnote">Experience managing personal brands, community accounts, and organizational media platforms.</p>
+  </div>
+</section>
+
+<section id="presence">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Online Presence</p>
+      <h2>Where I share, create, and build communities</h2>
+    </div>
+    <div class="presence-grid">
+      <div class="presence-card">
+        <p class="platform">X / Twitter</p>
+        <a class="handle" href="https://x.com/_Markstar" target="_blank" rel="noopener">@_Markstar</a>
+        <p>Web3 writing, research threads, and industry conversations.</p>
+      </div>
+      <div class="presence-card">
+        <p class="platform">Telegram</p>
+        <a class="handle" href="https://t.me/markstar3z" target="_blank" rel="noopener">@markstar3z</a>
+        <p>Web3 discussions, research notes, and community insights.</p>
+      </div>
+      <div class="presence-card">
+        <p class="platform">TikTok</p>
+        <a class="handle" href="https://www.tiktok.com/@mark_star3z" target="_blank" rel="noopener">@mark_star3z</a>
+        <p>Visual storytelling, creative edits, and short-form content.</p>
+      </div>
+      <div class="presence-card">
+        <p class="platform">Previous Media Experience</p>
+        <a class="handle" href="https://www.tiktok.com/@tcity_media.tv" target="_blank" rel="noopener">@tcity_media.tv</a>
+        <p>Previously managed digital media operations, visual content, and communication workflows for Triumphant City Media.</p>
       </div>
     </div>
   </div>
@@ -297,15 +364,79 @@
 <section id="projects">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Projects</p>
-      <h2>Written for, across Web3</h2>
+      <p class="eyebrow">Collaborations</p>
+      <h2>Projects, brands, and communities I've contributed to</h2>
     </div>
-    <div class="proj-cloud">
-      <span>AfriCred</span><span>GAIMIN</span><span>Morpheus Labs</span><span>Agent Zigma</span>
-      <span>Katana Inu</span><span>Vendetta Games</span><span>Swisshubb</span><span>Novastro</span>
-      <span>Plena Finance</span><span>AIGOS</span><span>Evoload</span><span>+ more</span>
+    <div class="collab-grid">
+      <div class="collab-card">
+        <h3>AfriCred</h3>
+        <p class="role">Content & Community Contribution</p>
+        <ul>
+          <li>Educational content</li>
+          <li>Community-focused writing</li>
+          <li>Project awareness content</li>
+        </ul>
+      </div>
+      <div class="collab-card">
+        <h3>GAIMIN</h3>
+        <p class="role">Content & Community Contribution</p>
+        <ul>
+          <li>Web3 threads</li>
+          <li>Promotional content</li>
+          <li>Community engagement</li>
+        </ul>
+      </div>
+      <div class="collab-card">
+        <h3>Morpheus Labs</h3>
+        <p class="role">Content & Community Contribution</p>
+        <ul>
+          <li>Project breakdowns</li>
+          <li>Educational threads</li>
+          <li>Announcement copy</li>
+        </ul>
+      </div>
+      <div class="collab-card">
+        <h3>Agent Zigma</h3>
+        <p class="role">Content & Community Contribution</p>
+        <ul>
+          <li>Narrative and awareness content</li>
+          <li>Community posts</li>
+        </ul>
+      </div>
+      <div class="collab-card">
+        <h3>Katana Inu</h3>
+        <p class="role">Content & Community Contribution</p>
+        <ul>
+          <li>Campaign copy</li>
+          <li>Community engagement content</li>
+        </ul>
+      </div>
+      <div class="collab-card">
+        <h3>Vendetta Games</h3>
+        <p class="role">Content & Community Contribution</p>
+        <ul>
+          <li>Promotional threads</li>
+          <li>Community-focused writing</li>
+        </ul>
+      </div>
     </div>
-    <p class="proj-note">Work ranged from threads and project breakdowns to campaign copy and community content, tailored to each project's voice and audience.</p>
+    <p class="collab-more">Also contributed to: Swisshubb, Novastro, Plena Finance, AIGOS, Evoload, and more.</p>
+    <p class="collab-note">Work ranged from threads and project breakdowns to campaign copy and community content, tailored to each project's voice and audience.</p>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Impact</p>
+      <h2>What this work has added up to</h2>
+    </div>
+    <ul class="impact-list">
+      <li>Developed educational and research-driven content for Web3 communities</li>
+      <li>Managed and supported X accounts through strategic content planning</li>
+      <li>Created threads, campaigns, and storytelling content across multiple industries</li>
+      <li>Helped simplify complex ideas into accessible content</li>
+    </ul>
   </div>
 </section>
 
@@ -318,7 +449,7 @@
         <li>AI & Emerging Technology</li>
         <li>Personal Development</li>
         <li>Education</li>
-        <li>Digital Marketing</li>
+        <li>Social Media & Digital Marketing</li>
         <li>Tech Startups</li>
       </ul>
     </div>
@@ -330,24 +461,22 @@
         <li>Research</li>
         <li>Storytelling</li>
         <li>Brand Voice Development</li>
-        <li>Graphic Design</li>
+        <li>Visual Content Design</li>
         <li>Prompt Engineering</li>
-        <li>Basic HTML/CSS</li>
-        <li>JavaScript</li>
+        <li>HTML & CSS Fundamentals</li>
+        <li>JavaScript Fundamentals</li>
       </ul>
     </div>
     <div>
       <h4>Tools</h4>
       <ul>
-        <li>ChatGPT / Grok</li>
-        <li>Claude</li>
-        <li>Notebook LM</li>
+        <li>AI Research & Writing Tools (ChatGPT, Grok, Claude, NotebookLM)</li>
         <li>Canva / CapCut</li>
-        <li>InShot</li>
-        <li>Filmora</li>
+        <li>InShot / Filmora</li>
         <li>Notion</li>
         <li>Google Workspace</li>
         <li>Microsoft Office</li>
+        <li>Crypto Research Platforms</li>
       </ul>
     </div>
   </div>
@@ -356,7 +485,7 @@
 <section id="contact">
   <div class="wrap contact-block">
     <p class="eyebrow" style="margin-bottom:14px;">Contact</p>
-    <h2>Want to work together? Let's talk.</h2>
+    <h2>Have a project in mind? Let's create something meaningful.</h2>
     <div class="contact-links">
       <a href="https://x.com/_Markstar" target="_blank" rel="noopener">X — @_Markstar</a>
       <a href="https://t.me/markstar3z" target="_blank" rel="noopener">Telegram — markstar3z</a>
@@ -366,7 +495,7 @@
 </section>
 
 <footer>
-  <p>MARK STAR &mdash; CONTENT STRATEGIST &amp; STORYTELLER</p>
+  <p>MARK STAR &mdash; CONTENT STRATEGY &bull; STORYTELLING &bull; WEB3</p>
 </footer>
 
 <script>
